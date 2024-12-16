@@ -29,20 +29,21 @@ def questions():
         solution = x * y
         sign = "x"
         
-        print("What is", str(x), str(sign), str(y)+"?")
-        u_input = question_ask()
+    print("What is", str(x), str(sign), str(y)+"?")
+    u_input = question_ask()
         
-        if u_input == solution:
-            print("Correct!")
-            global score
-            score = score + 1
-        else:
-            print("Incorrect! The answer was:", solution)
+    if u_input == solution:
+        print("Correct!")
+        global score
+        score = score + 1
+    else:
+        print("Incorrect! The answer was:", solution)
+        score = score
             
 name = input("What is your name? ")
-amount = int(input("How many questions do you want to do?"  ))
+amount = int(input("How many questions do you want to do?"))
 
-for i in range(amount):
+for i in range(1,amount):
     questions()
-
+    
 print ("You got", score, "/", amount)
