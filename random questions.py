@@ -43,7 +43,7 @@ def questions():
 name = input("What is your name? ")
 amount = int(input("How many questions do you want to do?"))
 
-for i in range(1,amount):
+for i in range(amount):
     questions()
     
 print ("You got", score, "/", amount)
